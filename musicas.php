@@ -53,7 +53,7 @@ if (isset($_SESSION["usuario"]) && is_array($_SESSION["usuario"])) {
                 </div>
                 <?php
                 $idArt = $_GET["idArt"];
-                $select_songs = $conn->prepare("SELECT * FROM `musicas` WHERE id_album='$idArt'");
+                $select_songs = $conn->prepare("SELECT * FROM `musicas` WHERE id_artista='$idArt'");
                 $select_songs->execute();
                 if($select_songs->rowCount() > 0){
                 while($fetch_song = $select_songs->fetch(PDO::FETCH_ASSOC)){
