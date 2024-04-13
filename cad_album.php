@@ -28,18 +28,7 @@ if (isset($_SESSION["usuario"]) && is_array($_SESSION["usuario"])) {
 <header>
     <div class="menu_side">
         <img src="Img/mkdg-girl-logo.png" class="image" alt="logo">
-        <div class="playlist">
-            <h4 class="active">
-                <span></span> <i class="bi bi-music-note-beamed"></i>Cad. Album
-            </h4>
-            <h4>
-                <span></span>
-                <a href="index.php">
-                    <i class="bi bi-music-note-beamed"></i>Home
-                </a>
-            </h4>
-
-        </div>
+        <?php require("menu.php"); ?>
     </div>
 
     <div class="song_side">

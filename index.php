@@ -19,46 +19,9 @@ if (isset($_SESSION["usuario"]) && is_array($_SESSION["usuario"])) {
 <header>
     <div class="menu_side">
         <img src="Img/mkdg-girl-logo.png" class="image" alt="logo">
-        <div class="playlist">
-            <h4 class="active">
-                <span></span> <i class="bi bi-music-note-beamed"></i>Home
 
-            </h4>
-
-            <a href="playlist3.php">
-                <h4>
-                    <span></span> <i class="bi bi-music-note-beamed"></i>playlist
-
-                </h4>
-            </a>
-            <?php
-            if($_SESSION["usuario"][2] > 0):
-                ?>
-                <a href="cad_artista.php">
-                <h4>
-                    <span></span> <i class="bi bi-music-note-beamed"></i>Cad. Artistas
-                </h4>
-                </a>
-
-                <a href="cad_album.php">
-                <h4>
-                    <span></span> <i class="bi bi-music-note-beamed"></i>Cad. Albuns
-                </h4>
-                </a>
-
-                <a href="cad_musica.php">
-                <h4>
-                    <span></span> <i class="bi bi-music-note-beamed"></i>Cad. Músicas
-                </h4>
-                </a>
-            <?php endif; ?>
-            <a href="contato.php">
-                <h4>
-                    <span></span> <i class="bi bi-music-note-beamed"></i>Contatos
-                </h4>
-            </a>
-
-        </div>
+<!--        Optei por colocar o menu num arquivo a parte-->
+        <?php require("menu.php"); ?>
     </div>
 
     <div class="song_side">

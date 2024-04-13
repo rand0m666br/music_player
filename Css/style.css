@@ -30,7 +30,7 @@
 body {
   width: 100%;
   height: 100vh;
-  background: #121213;
+  background: #ffffff;
   display: grid;
   place-items: center;
   overflow-x: hidden;
@@ -51,12 +51,12 @@ header {
 .song_side {
   width: 200px;
   height: 100vh;
-  background: #111727;
-  box-shadow: 5px 0px 2px #090f1f;
+  background: #7d2ae8;
+  box-shadow: 5px 0px 2px #ffffff;
 }
 
 .menu_side .playlist h4.active {
-  color: #36e2ec;
+  color: #ffffff;
 }
 .menu_side h1 {
   font-size: 20px;
@@ -72,13 +72,13 @@ header {
   font-size: 16px;
   font-weight: 400;
   padding-bottom: 10px;
-  color: #4c5262;
+  color: #ffffff;
   cursor: pointer;
   display: flex;
   align-items: center;
   transition: 0.3s linear;
   margin-bottom: 20px;
-  border-bottom: 1px solid #4c5262;
+  border-bottom: 1px solid #ffffff;
   max-width: 160px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -86,8 +86,8 @@ header {
 }
 
 .menu_side .playlist h4:hover {
-  color: #fff;
-  border-bottom: 1px solid #fff;
+  color: #b5e7ff;
+  border-bottom: 1px solid #b5e7ff;
 }
 
 .menu_side .playlist h4 span {
@@ -100,14 +100,14 @@ header {
   position: absolute;
   width: 4px;
   height: 4px;
-  border: 2px solid #4c5262;
+  border: 2px solid #ffffff;
   border-radius: 50%;
   top: -4px;
-  transition: 0.3s linear;
+  transition: 0.2yyys linear;
 }
 
 .menu_side .playlist h4:hover span::before {
-  border: 2px solid #fff;
+  border: 2px solid #b5e7ff;
 }
 
 .menu_side .playlist h4 .bi {
@@ -115,7 +115,7 @@ header {
 }
 
 .menu_side .playlist .active {
-  color: #36e2ec;
+  color: #ffffff;
   border-bottom: 1px solid #36e2ec;
 }
 
@@ -129,7 +129,7 @@ header {
 }
 .menu_side .playlist h4 a {
   text-decoration: none;
-  color: inherit;
+  color: #ffffff;
 }
 
 .menu_side .playlist h4 a:hover {
@@ -138,7 +138,9 @@ header {
 
 
 .menu_side .image{
-
+  background: white;
+  border: 2px white solid;
+  border-radius: 100px;
   width: 200px;
   height: 200px;
 
@@ -170,9 +172,10 @@ header {
   width: 90%;
   max-width: 1700px; /* Limitando a largura máxima para evitar que o conteúdo se estenda demais em telas maiores */
   margin: 0 auto; /* Centralizando o elemento horizontalmente */
-  background: #0b1320;
+  background: #ffffff;
+  border: 1px ;
   padding: 10% 5%; /* Ajustando o preenchimento para manter o conteúdo afastado das bordas */
-  color: #fff;
+  color: #ffffff;
   box-sizing: border-box; /* Garantindo que o preenchimento e a borda sejam considerados no dimensionamento */
 }
 
@@ -187,18 +190,14 @@ header {
 }
 
 .button {
-  color: #fff;
+  color: #7d2ae8;
   float: right;
   padding: 6px 20px;
   margin-top: 10px;
-  border: 2px solid #fff;
+  border: 2px solid #7d2ae8;
   background: transparent;
   border-radius: 6px;
   cursor: pointer;
-}
-
-.button:hover {
-  color: #36e2ec;
 }
 
 .button:active {
@@ -212,7 +211,7 @@ header {
   position: absolute;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: #ffffff;
   z-index: 100;
   opacity: 0;
   pointer-events: none;
@@ -239,6 +238,11 @@ header {
   opacity: 0;
   pointer-events: none;
   transition: all 0.4s ease-out;
+  border: 2px solid #7d2ae8;
+}
+.form_container .button{
+color: white;
+border: transparent;
 }
 
 .home.show .form_container {
@@ -694,10 +698,15 @@ i.active{
 
 .form_container .button {
   background: #7d2ae8;
+  color: #ffffff;
   margin-top: 30px;
   width: 100%;
   padding: 10px 0;
-  border-radius: 10px;
+  border-radius: #ffffff 10px;
+}
+.form_container .button:hover{
+  color: rgb(255, 238, 0);
+  border-radius: #ff0000 10px
 }
 
 .login_singup {
@@ -719,13 +728,15 @@ i.active{
 
 .cad_artist {
   display: block;
-
-  width: 80%;
-  margin: 0;
+  color: #7d2ae8;
+  align-items: center;
+  width: 60%;
+  height: 100%;
   padding: 20px;
-  background-color: #535353;
+  background-color: #ffffff;
+  border: #7d2ae8 2px solid;
   border-radius: 10px;
-  margin-left: 20px;
+  margin-left: 300px;
 }
 
 
@@ -763,7 +774,7 @@ i.active{
   display: block;
   width: 100%;
   padding: 10px;
-  background-color: #007bff;
+  background-color: #7d2ae8;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -772,7 +783,7 @@ i.active{
 }
 
 .cad_artist button[type="submit"]:hover {
-  background-color: #0056b3;
+  background-color: #7d2ae8;
 }
 
 .cad_album.show {
@@ -781,13 +792,15 @@ i.active{
 
 .cad_album {
   display: block;
-
-  width: 80%;
-  margin: 0;
+  color: #7d2ae8;
+  align-items: center;
+  width: 60%;
+  height: 100%;
   padding: 20px;
-  background-color: #535353;
+  background-color: #ffffff;
+  border: #7d2ae8 2px solid;
   border-radius: 10px;
-  margin-left: 20px;
+  margin-left: 300px;
 }
 
 
@@ -821,7 +834,7 @@ i.active{
   display: block;
   width: 100%;
   padding: 10px;
-  background-color: #007bff;
+  background-color: #7d2ae8;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -830,7 +843,7 @@ i.active{
 }
 
 .cad_album button[type="submit"]:hover {
-  background-color: #0056b3;
+  background-color: #7d2ae8;
 }
 
 
@@ -840,13 +853,15 @@ i.active{
 
 .cad_music {
   display: block;
-
-  width: 80%;
-  margin: 0;
+  color: #7d2ae8;
+  align-items: center;
+  width: 60%;
+  height: 100%;
   padding: 20px;
-  background-color: #535353;
+  background-color: #ffffff;
+  border: #7d2ae8 2px solid;
   border-radius: 10px;
-  margin-left: 20px;
+  margin-left: 300px;
 }
 
 
@@ -880,7 +895,7 @@ i.active{
   display: block;
   width: 100%;
   padding: 10px;
-  background-color: #007bff;
+  background-color: #7d2ae8;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -889,7 +904,7 @@ i.active{
 }
 
 .cad_music button[type="submit"]:hover {
-  background-color: #0056b3;
+  background-color: #7d2ae8;
 }
 
 .form-group {
@@ -965,7 +980,7 @@ button[type="submit"]:hover {
 
 .home-principal .home-content h3 span{
   margin-bottom: 2rem;
-  color: #7d2ae8;
+  color: #6f00ff;
 }
 
 .home-principal .home-content h3 {
@@ -1014,7 +1029,7 @@ margin-bottom: 3rem;
   padding: 1.5rem;
   font-size: 1.6rem;
   color: #7d2ae8;
-  background: #0b1320;
+  background: #ffffff;
   border-radius: .8rem;
   margin: .7rem 0;
 
@@ -1035,7 +1050,7 @@ margin-bottom: 3rem;
 .btn {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #7d2ae8;
   color: #fff;
   font-size: 16px;
   font-weight: bold;
@@ -1047,7 +1062,7 @@ margin-bottom: 3rem;
 
 
 .btn:hover {
-  background-color: #0056b3;
+  background-color: #7d2ae8;
 }
 
 

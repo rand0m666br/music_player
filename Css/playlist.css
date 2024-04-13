@@ -4,16 +4,19 @@
     display: block;
     margin: auto;
 }
+
 audio {
     display: block;
     margin: auto;
     width: 450px;
     height: 20px;
 }
+
 #compositor {
     height: 170px;
     background-color: rgb(54, 54, 54);
 }
+
 #compositor .imagem {
     /*background-color: aqua;*/
     background-image: url("../data/outros/dark funeral logo.jpg");
@@ -28,20 +31,37 @@ audio {
     margin-left: 50px;
     border-radius: 100px;
 }
+
 #compositor span {
     display: block;
     margin-left: 200px;
     margin-top: 10px;
 }
+
 #compositor .nomeComp {
     padding-top: 50px;
     font-weight: 900;
 }
+
 #musicas #titulos {
     margin-left: 60px;
     margin-bottom: 6px;
     margin-top: 10px;
 }
+
 #musicas {
     padding-bottom: 10px;
+}
+
+.song_side>#play {
+    display: block;
+    color: #7d2ae8;
+    align-items: center;
+  
+    padding: 20px;
+    background-color: #ffffff;
+    border: #7d2ae8 2px solid;
+    border-radius: 10px;
+    margin-left: 350px;
+
 }

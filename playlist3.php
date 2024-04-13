@@ -29,18 +29,7 @@ if (isset($_SESSION["usuario"]) && is_array($_SESSION["usuario"])) {
     <header>
         <div class="menu_side">
             <img src="Img/mkdg-girl-logo.png" class="image" alt="logo">
-            <div class="playlist">
-                <h4 class="active">
-                    <span></span> <i class="bi bi-music-note-beamed"></i>Playlist
-                </h4>
-                <h4>
-                    <span></span>
-                    <a href="index.php">
-                        <i class="bi bi-music-note-beamed"></i>Home
-                    </a>
-                </h4>
-
-            </div>
+            <?php require("menu.php"); ?>
         </div>
 
         <div class="song_side">
@@ -72,34 +61,6 @@ if (isset($_SESSION["usuario"]) && is_array($_SESSION["usuario"])) {
                 <?php }} ?>
             </div>
             <br> <br> <br>
-            <div id="play">
-
-                <?php
-                $select_album = $conn->prepare("SELECT * FROM `albuns`");
-                $select_album->execute();
-                if($select_album->rowCount() > 0){
-                while($fetch_album = $select_album->fetch(PDO::FETCH_ASSOC)){
-                ?>
-                <div id="musicas">
-                    <div id="titulos">
-                        id album:
-                        <?= $fetch_album["id_album"]; ?>
-                    </div>
-                    <div id="titulos">
-                        id artista:
-                        <?= $fetch_album["id_artista"]; ?>
-                    </div>
-                    <div id="titulos">
-                        nome:
-                        <?= $fetch_album["nome"]; ?>
-                    </div>
-                    <div id="titulos">
-                        ano de lançamento:
-                        <?= $fetch_album["ano_lancamento"]; ?>
-                    </div>
-                </div>
-                <?php } ?>
-            </div>
 
         </div>
     </header>
@@ -116,4 +77,3 @@ if (isset($_SESSION["usuario"]) && is_array($_SESSION["usuario"])) {
 </body>
 
 </html>
-<?php } ?>
