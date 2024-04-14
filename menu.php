@@ -31,10 +31,10 @@
             </h4>
         </a>
     <?php endif; ?>
-    <a href="contato.php">
-        <h4>
-            <span></span> <i class="bi bi-music-note-beamed"></i>Contatos
-        </h4>
-    </a>
+<!--    <a href="contato.php">-->
+<!--        <h4>-->
+<!--            <span></span> <i class="bi bi-music-note-beamed"></i>Contatos-->
+<!--        </h4>-->
+<!--    </a>-->
 
 </div>

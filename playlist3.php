@@ -1,5 +1,6 @@
 <?php
 session_start();
+//echo($_SESSION["usuario"][2]);
 if (isset($_SESSION["usuario"]) && is_array($_SESSION["usuario"])) {
     if ($_SESSION["usuario"][2] < 0) {
         header("location: login.php");
