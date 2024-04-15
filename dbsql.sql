@@ -28,7 +28,7 @@ CREATE TABLE `artistas` (
   `descricao` text DEFAULT NULL,
   `link_foto` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id_artista`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,7 +39,9 @@ LOCK TABLES `artistas` WRITE;
 /*!40000 ALTER TABLE `artistas` DISABLE KEYS */;
 INSERT INTO `artistas` VALUES
 (1,'teste','aaaa','0'),
-(2,'artista teste','asdasd','0');
+(2,'artista teste','asdasd','0'),
+(3,'Paula Tejando','puta que pariu','0'),
+(4,'seu zé','testetetetetet','tomoko taxi driver.jpg');
 /*!40000 ALTER TABLE `artistas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -59,7 +61,7 @@ CREATE TABLE `musicas` (
   PRIMARY KEY (`id_musica`),
   KEY `musicas_artistas_FK` (`id_artista`),
   CONSTRAINT `musicas_artistas_FK` FOREIGN KEY (`id_artista`) REFERENCES `artistas` (`id_artista`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -74,7 +76,8 @@ INSERT INTO `musicas` VALUES
 (3,'My Funeral','darkfuneral.mp3','teste',NULL),
 (4,'Papai Noel Filho da Puta','Garotos Podres - Papai Noel filho da puta [jDDlLtZFgNo].mp3','teste',NULL),
 (5,'Transbordando ódio','WORST ＂Transbordando Ódio＂ [XXwknzOeAws].mp3','teste',NULL),
-(6,'Oh Mefisto','UDR - Oh, Mefisto [220278100].mp3','0',2);
+(6,'Oh Mefisto','UDR - Oh, Mefisto [220278100].mp3','0',2),
+(7,'teste musicaaaa','Preto Fudido (Reupload) [1114796608].mp3','0',1);
 /*!40000 ALTER TABLE `musicas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -147,7 +150,7 @@ CREATE TABLE `usuarios` (
   `senha` varchar(255) NOT NULL,
   `nivel` int(11) NOT NULL DEFAULT 0,
   PRIMARY KEY (`id_usuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -163,7 +166,8 @@ INSERT INTO `usuarios` VALUES
 (4,'teste','teste@email.com','$argon2id$v=19$m=65536,t=4,p=1$NnMuTTZwMVpOR0J5a0ViSQ$om/t69Hu93PDUp1RofL3uoCTXOLoSLscAPUgwaiDGFE',0),
 (5,'heitor','heitor@gmail.com','$argon2id$v=19$m=65536,t=4,p=1$YmRleS5oMFdISWsubWFQRQ$PPA8kjBX2ogRqiGIXN5NX9mgEgt7hs62WYIAPNfwncY',1),
 (6,'userr','userr@email.com','$argon2id$v=19$m=65536,t=4,p=1$OUd2Lzc5UFhLVi9YdWR1bA$ItiJiGLRq6Bmy4VaixZNCNk2e8Q1MXch4ohOH7W5Yes',0),
-(7,'userteste','userteste@email.com','$argon2id$v=19$m=65536,t=4,p=1$R2diYjY3bGUxMkdHU2lKUA$moUEPc0LGUUlxtIXOC7tcYrIHupSIu+oo6e76FXveE8',0);
+(7,'userteste','userteste@email.com','$argon2id$v=19$m=65536,t=4,p=1$R2diYjY3bGUxMkdHU2lKUA$moUEPc0LGUUlxtIXOC7tcYrIHupSIu+oo6e76FXveE8',0),
+(8,'123','123@email.com','$argon2id$v=19$m=65536,t=4,p=1$ekNMU1BySVlSQW04VFRYQw$1cm83IyJ4+5GomyTgsozmdXzf6jA6Dk+KrH6sS0D1ek',0);
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -176,4 +180,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-04-09 19:32:46
+-- Dump completed on 2024-04-15 19:48:52
