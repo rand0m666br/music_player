@@ -16,36 +16,44 @@ if (isset($_SESSION["usuario"]) && is_array($_SESSION["usuario"])) {
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <link rel="stylesheet" href="./Css/style.css" />
-    <link rel="stylesheet" href="./Css/playlist.css" />
+    <link rel="stylesheet" href="./Css/style.css"/>
+    <link rel="stylesheet" href="./Css/playlist.css"/>
     <title>Spotify</title>
 </head>
 
 <body>
-    <header>
-        <div class="menu_side">
-            <img src="Img/mkdg-girl-logo.png" class="image" alt="logo">
-            <?php require("menu.php"); ?>
-        </div>
+<header>
+    <div class="menu_side">
+        <img src="Img/mkdg-girl-logo.png" class="image" alt="logo">
+        <?php require("menu.php"); ?>
+    </div>
 
-        <div class="song_side">
+    <div class="song_side">
 
-            <div id="play">
-                <div id="compositor">
-                    <div class="imagem"></div>
-                    <span class="nomeComp">Dark Funeral</span>
-                    <span class="descricao">Lorem Ipsum</span>
-                </div>
-                <?php
-                $idArt = $_GET["idArt"];
-                $select_songs = $conn->prepare("SELECT * FROM `musicas` WHERE id_artista='$idArt'");
-                $select_songs->execute();
-                if($select_songs->rowCount() > 0){
-                while($fetch_song = $select_songs->fetch(PDO::FETCH_ASSOC)){
+        <?php
+        // Pegando o id do artista que tá sendo passado pela URL
+        $idArt = $_GET["idArt"];
+
+        $selectArtista = $conn->prepare("SELECT * from artistas where id_artista = '$idArt'");
+        $selectArtista->execute();
+        $artista = $selectArtista->fetch(PDO::FETCH_ASSOC);
+        ?>
+        <div id="play">
+            <div id="compositor">
+                <div class="imagem"><img src="data/imgs/<?= $artista['link_foto'] ?>""></div>
+                <!--                    <img src="data/imgs/codigophpaqui alt="">-->
+                <span class="nomeComp"><?= $artista["nome"]; ?></span>
+                <span class="descricao"><?= $artista["descricao"]; ?></span>
+            </div>
+            <?php
+            $select_songs = $conn->prepare("SELECT * FROM `musicas` WHERE id_artista='$idArt'");
+            $select_songs->execute();
+            if ($select_songs->rowCount() > 0){
+            while ($fetch_song = $select_songs->fetch(PDO::FETCH_ASSOC)) {
                 ?>
                 <div id="musicas">
                     <div id="titulos">
@@ -55,19 +63,19 @@ if (isset($_SESSION["usuario"]) && is_array($_SESSION["usuario"])) {
                         <source src="data/<?= $fetch_song['link_arquivo']; ?>" type="audio/mpeg">
                     </audio>
                 </div>
-                <?php } ?>
-            </div>
-
+            <?php } ?>
         </div>
-    </header>
 
-    <div class="right">
-        <a href="php/logout.php" class="logout-button">Sair</a>
     </div>
-    <!-- <script type="text/javascript" src="./Js/app.js"></script> -->
-    <!-- <script type="text/javascript" src="./Js/music.js"></script> -->
-    <!-- <script type="text/javascript" src="./Js/script.js"></script> -->
-    <!-- <script type="text/javascript" src="./Js/home.js"></script> -->
+</header>
+
+<div class="right">
+    <a href="php/logout.php" class="logout-button">Sair</a>
+</div>
+<!-- <script type="text/javascript" src="./Js/app.js"></script> -->
+<!-- <script type="text/javascript" src="./Js/music.js"></script> -->
+<!-- <script type="text/javascript" src="./Js/script.js"></script> -->
+<!-- <script type="text/javascript" src="./Js/home.js"></script> -->
 
 
 </body>

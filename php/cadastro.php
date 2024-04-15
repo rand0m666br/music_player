@@ -23,6 +23,11 @@ if (isset($_GET["acao"])) {
         $artista = new Artista($conexao);
         $artista->nome = $_POST["nomeArtista"];
         $artista->desc = $_POST["descArtista"];
+
+        $artista->imagem = $_FILES["imagem"]["name"];
+        $artista->imgSize = $_FILES["imagem"]["size"];
+        $artista->imgName = $_FILES["imagem"]["tmp_name"];
+
         $artista->cadArtista();
     }
     // if ($acao == "album") {

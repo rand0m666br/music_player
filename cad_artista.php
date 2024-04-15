@@ -28,10 +28,10 @@
                     <input type="text" id="nome_musica" name="nomeArtista" required>
                 </div>
 
-                <!-- <div class="form-group">
+                <div class="form-group">
                     <label for="imagem">Upload de Imagem:</label>
                     <input type="file" id="imagem" name="imagem" accept="image/*">
-                </div> -->
+                </div>
 
                 <div class="form-group">
                     <label for="nome_artista">Descrição:</label>

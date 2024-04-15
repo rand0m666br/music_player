@@ -97,6 +97,9 @@ class Usuario extends Pessoa {
 }
 
 class Artista extends Pessoa {
+    public $imagem;
+    public $imgSize;
+    public $imgName;
     public function cadArtista() {
         session_start();
         $tabela = "artistas";
@@ -107,10 +110,12 @@ class Artista extends Pessoa {
         if ($verifica->verificaUser($this->desc, $this->nome, $tabela, $info)) {
             echo "<script>alert('O artista já existe!')</script>";
         }else {
+            $dir = "../data/imgs/" . $this->imagem;
             $conexao = $this->con->conectar();
             $sql = "INSERT INTO `artistas`(`nome`, `descricao`, `link_foto`) VALUES (?, ?, ?)";
             $query = $conexao->prepare($sql);
-            $query->execute(array($this->nome, $this->desc, $link));
+            $query->execute(array($this->nome, $this->desc, $this->imagem));
+            move_uploaded_file($this->imgName, $dir);
             header("location: ../index.php");
         }
     }

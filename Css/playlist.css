@@ -19,7 +19,7 @@ audio {
 
 #compositor .imagem {
     /*background-color: aqua;*/
-    background-image: url("../data/outros/dark funeral logo.jpg");
+    /*background-image: url("../data/outros/dark funeral logo.jpg");*/
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -30,6 +30,9 @@ audio {
     margin-top: 22px;
     margin-left: 50px;
     border-radius: 100px;
+}
+#compositor .imagem img {
+    width: 125px;
 }
 
 #compositor span {
