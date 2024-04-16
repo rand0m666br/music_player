@@ -1,8 +1,7 @@
 #play {
-    background-color: rgb(0, 0, 0);
     width: 500px;
-    display: block;
-    margin: auto;
+    float: right;
+    margin-right: 33%;
 }
 
 audio {
@@ -14,25 +13,30 @@ audio {
 
 #compositor {
     height: 170px;
-    background-color: rgb(54, 54, 54);
+    background-color: rgba(255, 255, 255, 0.41);
 }
 
 #compositor .imagem {
     /*background-color: aqua;*/
     /*background-image: url("../data/outros/dark funeral logo.jpg");*/
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 130px;
-    width: 130px;
-    position: absolute;
-    z-index: 2;
-    margin-top: 22px;
-    margin-left: 50px;
-    border-radius: 100px;
+    /*background-position: center;*/
+    /*background-size: cover;*/
+    /*background-repeat: no-repeat;*/
+    /*height: 130px;*/
+    /*width: 130px;*/
+    /*position: absolute;*/
+    /*z-index: 2;*/
+    /*margin-top: 22px;*/
+    /*margin-left: 50px;*/
+    /*border-radius: 100px;*/
 }
 #compositor .imagem img {
     width: 125px;
+    position: absolute;
+    border-radius: 300px;
+    margin-top: 18px;
+    margin-left: 10px;
+    box-shadow: 0px 0px 10px 1px #6f00ff;
 }
 
 #compositor span {
@@ -53,7 +57,9 @@ audio {
 }
 
 #musicas {
-    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #7d2ae8;
+    border-radius: 10px;
 }
 
 .song_side>#play {

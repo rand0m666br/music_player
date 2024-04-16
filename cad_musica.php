@@ -38,6 +38,7 @@
                             <option value="" disabled selected>Selecione um Artista</option>
 
                             <?php
+                            // Variável $conexao tá sendo chamada do arquivo php/valida_adm.php
                             $artistaQuery = $conexao->prepare("SELECT * FROM artistas");
                             $artistaQuery->execute();
                             $dadosArt = $artistaQuery->fetchAll(PDO::FETCH_ASSOC);

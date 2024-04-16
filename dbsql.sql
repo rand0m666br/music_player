@@ -61,7 +61,7 @@ CREATE TABLE `musicas` (
   PRIMARY KEY (`id_musica`),
   KEY `musicas_artistas_FK` (`id_artista`),
   CONSTRAINT `musicas_artistas_FK` FOREIGN KEY (`id_artista`) REFERENCES `artistas` (`id_artista`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -77,7 +77,21 @@ INSERT INTO `musicas` VALUES
 (4,'Papai Noel Filho da Puta','Garotos Podres - Papai Noel filho da puta [jDDlLtZFgNo].mp3','teste',NULL),
 (5,'Transbordando ódio','WORST ＂Transbordando Ódio＂ [XXwknzOeAws].mp3','teste',NULL),
 (6,'Oh Mefisto','UDR - Oh, Mefisto [220278100].mp3','0',2),
-(7,'teste musicaaaa','Preto Fudido (Reupload) [1114796608].mp3','0',1);
+(7,'teste musicaaaa','Preto Fudido (Reupload) [1114796608].mp3','0',1),
+(8,'Bonde de Jesus','UDR  Bonde de Jesus.mp3','0',4),
+(9,'testeeeefewferf','Şehadet Vakti! - Muhammed Fatih (Nasheed) [1220129947].mp3','0',4),
+(10,'grthgrthtrh','FGFC820  Doctrine Video mix with lyrics.mp3','0',1),
+(11,'preto fudido','Preto Fudido2.mp3','0',4),
+(12,'nosso deus nao é brasileiro','nosso-deus-não-é-brasileiro.mp3','0',4),
+(13,'acabei de comer uma gorda','ACABEI DE COMER UMA GORDA [uwodFTGR3lI].mp3','0',4),
+(14,'teste musica grande','UDR  Bonde de Jesus.mp3','0',4),
+(15,'teste musica grande2','FGFC820  Doctrine Video mix with lyrics.mp3','0',4),
+(16,'teste musica grande3','Filosofia Do Suicídio [vL5G760VMmg].mp3','0',4),
+(17,'uhgtrgurtudrhgrt','Şehadet Vakti! - Muhammed Fatih (Nasheed) [1220129947].mp3','0',4),
+(18,'fodase','UDR  Bonde de Jesus.mp3','0',4),
+(19,'caralho','FGFC820  Doctrine Video mix with lyrics.mp3','0',1),
+(20,'caralho porra','FGFC820  Doctrine Video mix with lyrics.mp3','0',1),
+(21,'filho da puta','FGFC820  Doctrine Video mix with lyrics.mp3','0',1);
 /*!40000 ALTER TABLE `musicas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -180,4 +194,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-04-15 19:48:52
+-- Dump completed on 2024-04-16 19:55:18

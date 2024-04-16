@@ -61,7 +61,6 @@ if (isset($_SESSION["usuario"]) && is_array($_SESSION["usuario"])) {
                 </div>
                 <?php }} ?>
             </div>
-            <br> <br> <br>
 
         </div>
     </header>

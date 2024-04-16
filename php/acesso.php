@@ -14,7 +14,8 @@ class Pessoa
     }
 }
 
-class Verifica extends Pessoa {
+class Verifica extends Pessoa
+{
     // Função pra validar se já existe um usuário com o mesmo nome ou email no bd
     public function verificaUser($email, $nome, $tabela, $info)
     {
@@ -26,20 +27,26 @@ class Verifica extends Pessoa {
     }
 }
 
-class Usuario extends Pessoa {
+class Usuario extends Pessoa
+{
     private $senha;
     private $senhaConfirma;
 
     // Atribuir valor a senha
-    public function setSenha($senha, $senhaConfirma){
+    public function setSenha($senha, $senhaConfirma)
+    {
         $this->senha = $senha;
         $this->senhaConfirma = $senhaConfirma;
     }
+
     // Retornar valor da senha
-    public function getSenha(){
+    public function getSenha()
+    {
         return $this->senha;
     }
-    public function getConfirma(){
+
+    public function getConfirma()
+    {
         return $this->senhaConfirma;
     }
 
@@ -50,12 +57,12 @@ class Usuario extends Pessoa {
         $info = 'email';
         $verifica = new Verifica($this->con);
         $verifica->verificaUser($this->email, $this->nome, $tabela, $info);
-        if ($verifica->verificaUser($this->email, $this->nome, $tabela, $info)){
+        if ($verifica->verificaUser($this->email, $this->nome, $tabela, $info)) {
             session_start();
             $_SESSION["msg"] = "Erro: o usuário já existe!";
             header("location: ../login.php");
             // var_dump($this->nome, $this->email);
-        }else {
+        } else {
             $conexao = $this->con->conectar();
             $sql = "INSERT INTO `usuarios`(`nome`, `email`, `senha`) VALUES (?, ?, ?)";
             $query = $conexao->prepare($sql);
@@ -71,7 +78,8 @@ class Usuario extends Pessoa {
     }
 
     // Função de login
-    public function login(){
+    public function login()
+    {
         $conexao = $this->con->conectar();
         $sql = "SELECT * FROM usuarios WHERE email = ?";
         $query = $conexao->prepare($sql);
@@ -83,24 +91,27 @@ class Usuario extends Pessoa {
                 session_start();
                 $_SESSION["usuario"] = array($dados["nome"], $dados["id_usuario"], $dados["nivel"]);
                 header("location: ../index.php");
-            }else {
+            } else {
                 session_start();
                 $_SESSION["msg"] = "Usuário ou senha inválido";
                 header("location: ../login.php");
             }
-        }else {
-             session_start();
+        } else {
+            session_start();
             $_SESSION["msg"] = "Usuário ou senha inválido";
             header("location: ../login.php");
         }
     }
 }
 
-class Artista extends Pessoa {
+class Artista extends Pessoa
+{
     public $imagem;
     public $imgSize;
     public $imgName;
-    public function cadArtista() {
+
+    public function cadArtista()
+    {
         session_start();
         $tabela = "artistas";
         $info = "descricao";
@@ -109,7 +120,7 @@ class Artista extends Pessoa {
         $verifica->verificaUser($this->desc, $this->nome, $tabela, $info);
         if ($verifica->verificaUser($this->desc, $this->nome, $tabela, $info)) {
             echo "<script>alert('O artista já existe!')</script>";
-        }else {
+        } else {
             $dir = "../data/imgs/" . $this->imagem;
             $conexao = $this->con->conectar();
             $sql = "INSERT INTO `artistas`(`nome`, `descricao`, `link_foto`) VALUES (?, ?, ?)";
@@ -137,14 +148,16 @@ class Album extends Pessoa {
     }
 }*/
 
-class Musica extends Pessoa {
+class Musica extends Pessoa
+{
     // public $album;
     public $artista;
     public $musica;
     public $tamanho;
     public $tmp_nome;
 
-    public function cadMusica() {
+    public function cadMusica()
+    {
         $conexao = $this->con->conectar();
         $pasta = "../data/" . $this->musica;
         $link = 0;
@@ -157,5 +170,5 @@ class Musica extends Pessoa {
 }
 
 $conexao = new Conexao();
-$classe = new Pessoa($conexao);
+//$classe = new Pessoa($conexao);
 ?>
