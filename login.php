@@ -18,7 +18,7 @@ if (isset($_SESSION["usuario"]) && is_array($_SESSION["usuario"])) {
 <body>
   <header>
     <div id="msg">
-      <p style="position: absolute; z-index: 5; font-size: 35px; margin-left: 37%; color: white; margin-top: -450px;">
+      <p style="position: absolute; z-index: 5; font-size: 35px; margin-left: 37%; color: white; margin-top: -450px; color: black;">
         <?php
         echo @$_SESSION["msg"];
         ?>
@@ -52,14 +52,6 @@ if (isset($_SESSION["usuario"]) && is_array($_SESSION["usuario"])) {
                 <input type="password" placeholder="Senha" required name="senha">
                 <i class="bi bi-key password"></i>
                 <i class="bi bi-eye-slash pw_hide"></i>
-
-                <div class="option_field">
-                  <span class="checkbox">
-                    <input type="checkbox" id="check" />
-                    <label for="check">Lembrar Login</label>
-                  </span>
-                  <a href="#" class="forgot_pw">Esqueci a senha?</a>
-                </div>
                 <button class="button">Logar Agora</button>
                 <div class="login_singup">
                   Não é Cadastrado? <a href="#" id="singup">Cadastrar</a>

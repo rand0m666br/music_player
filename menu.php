@@ -8,7 +8,7 @@
 
     <a href="playlist3.php">
         <h4>
-            <span></span> <i class="bi bi-music-note-beamed"></i>playlist
+            <span></span> <i class="bi bi-music-note-beamed"></i>Playlist
 
         </h4>
     </a>

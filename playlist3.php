@@ -45,17 +45,13 @@ if (isset($_SESSION["usuario"]) && is_array($_SESSION["usuario"])) {
                 ?>
                 <div id="musicas">
                     <div id="titulos">
-                        id artista:
-                        <?= $fetch_song["id_artista"]; ?>
-                    </div>
-                    <div id="titulos">
-                        nome artista:
+                        Nome:
                         <a href="musicas.php?idArt=<?= $fetch_song['id_artista']; ?>">
                             <?= $fetch_song["nome"]; ?>
                         </a>
                     </div>
                     <div id="titulos">
-                        descrição:
+                        Descrição:
                         <?= $fetch_song["descricao"]; ?>
                     </div>
                 </div>

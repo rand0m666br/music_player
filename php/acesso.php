@@ -170,5 +170,4 @@ class Musica extends Pessoa
 }
 
 $conexao = new Conexao();
-//$classe = new Pessoa($conexao);
 ?>
